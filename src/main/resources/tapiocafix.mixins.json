@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "ga.melara.tapiocafix.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "tapiocafix.refmap.json",
+  "mixins": [
+    "CafeDrinkMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
