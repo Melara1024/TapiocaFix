@@ -26,7 +26,7 @@ public class CafeDrinkMixin extends Item {
     public void onFinishUsingItem(ItemStack stack, Level level, LivingEntity livingEntity, CallbackInfoReturnable<ItemStack> cir){
         if(livingEntity instanceof Player player) {
             ItemStack itemstack = super.finishUsingItem(stack, level, livingEntity);
-            player.getInventory().add(new ItemStack((ItemLike) ItemRegistry.EMPTY_BOBA_CUP.get()));
+            if(!player.getAbilities().instabuild) player.getInventory().add(new ItemStack(ItemRegistry.EMPTY_BOBA_CUP.get()));
             cir.setReturnValue(itemstack);
         }
     }
